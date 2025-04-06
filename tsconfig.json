@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/01-simple-api"
+    },
+    {
+      "path": "./apps/01-mongodb-stream-worker"
     }
   ]
 }
