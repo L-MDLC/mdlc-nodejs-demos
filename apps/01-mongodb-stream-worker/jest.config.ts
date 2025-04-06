@@ -16,7 +16,7 @@ export default {
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
-  roots: ['<rootDir>/apps/01-mongodb-stream-worker/test'],
+  roots: ['<rootDir>/test'],
   collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov'],
