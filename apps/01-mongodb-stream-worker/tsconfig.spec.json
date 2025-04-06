@@ -2,13 +2,19 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/jest",
-    "types": ["jest", "node"]
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["jest", "node"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
   },
   "include": [
     "jest.config.ts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.d.ts",
+    "test/**/*.ts",
+    "apps/01-mongodb-stream-worker/test/**/*.ts"
   ],
   "references": [
     {

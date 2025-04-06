@@ -1,7 +1,13 @@
 {
-  "name": "@monorepo-node/01-mongodb-stream-worker",
-  "version": "0.0.1",
+  "name": "@mdlc-nodejs-demos/01-mongodb-stream-worker",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "node dist/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
   "nx": {
     "targets": {
       "build": {
@@ -48,15 +54,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@monorepo-node/01-mongodb-stream-worker:build",
+          "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@monorepo-node/01-mongodb-stream-worker:build:development"
+            "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build:development"
           },
           "production": {
-            "buildTarget": "@monorepo-node/01-mongodb-stream-worker:build:production"
+            "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build:production"
           }
         }
       },
