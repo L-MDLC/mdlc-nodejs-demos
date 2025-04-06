@@ -91,7 +91,7 @@ importers:
         specifier: ^8.19.0
         version: 8.28.0(eslint@9.23.0)(typescript@5.7.3)
 
-  api: {}
+  apps/01-simple-api: {}
 
 packages:
 
