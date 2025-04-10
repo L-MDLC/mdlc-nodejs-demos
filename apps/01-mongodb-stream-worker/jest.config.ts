@@ -10,12 +10,21 @@ const swcJestConfig = JSON.parse(
 swcJestConfig.swcrc = false;
 
 export default {
-  displayName: '@monorepo-node/api',
+  displayName: '@mdlc-nodejs-demos/01-mongodb-stream-worker',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
-  moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: 'test-output/jest/coverage',
+  roots: ['<rootDir>/test'],
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text', 'lcov'],
+  testMatch: ['**/*.test.ts'],
+  moduleFileExtensions: ['ts', 'js', 'json', 'node'],
+  clearMocks: true,
+  resetMocks: true,
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/apps/01-mongodb-stream-worker/src/$1'
+  }
 };

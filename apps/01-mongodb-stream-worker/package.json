@@ -1,7 +1,10 @@
 {
-  "name": "@monorepo-node/api",
-  "version": "0.0.1",
+  "name": "@mdlc-nodejs-demos/01-mongodb-stream-worker",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "start": "node dist/main.js"
+  },
   "nx": {
     "targets": {
       "build": {
@@ -12,15 +15,15 @@
         "defaultConfiguration": "production",
         "options": {
           "platform": "node",
-          "outputPath": "apps/api/dist",
+          "outputPath": "apps/01-mongodb-stream-worker/dist",
           "format": [
             "cjs"
           ],
           "bundle": false,
-          "main": "apps/api/src/main.ts",
-          "tsConfig": "apps/api/tsconfig.app.json",
+          "main": "apps/01-mongodb-stream-worker/src/main.ts",
+          "tsConfig": "apps/01-mongodb-stream-worker/tsconfig.app.json",
           "assets": [
-            "apps/api/src/assets"
+            "apps/01-mongodb-stream-worker/src/assets"
           ],
           "esbuildOptions": {
             "sourcemap": true,
@@ -48,15 +51,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@monorepo-node/api:build",
+          "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@monorepo-node/api:build:development"
+            "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build:development"
           },
           "production": {
-            "buildTarget": "@monorepo-node/api:build:production"
+            "buildTarget": "@mdlc-nodejs-demos/01-mongodb-stream-worker:build:production"
           }
         }
       },
@@ -65,6 +68,9 @@
           "passWithNoTests": true
         }
       }
-    }
+    },
+    "tags": [
+      "type:worker"
+    ]
   }
 }

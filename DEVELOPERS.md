@@ -14,7 +14,12 @@ https://www.jetbrains.com/idea/
 
 ## Getting started
 
-🚧 TODO
+🚧 In progress...
+
+### Create new project
+
+Using NX, you can create new project for the mono-repository using : \
+```nx generate @nx/node:application XX-APPLICATION_NAME --directory=apps --tags=XXX```
 
 # Conventions
 
